@@ -99,6 +99,17 @@ section h2 {
     margin-bottom: 0;
 }
 
+.author-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.author-info {
+    flex: 1;
+}
+
 .author-card h3 {
     font-size: 1.4rem;
     margin-bottom: 15px;
@@ -110,6 +121,19 @@ section h2 {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
+}
+
+.author-photo {
+    flex-shrink: 0;
+}
+
+.author-photo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--border-accent);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .link-btn {
@@ -184,9 +208,18 @@ footer {
         padding: 20px;
     }
     
-    .author-links {
+    .author-content {
         flex-direction: column;
-        gap: 10px;
+        text-align: center;
+    }
+    
+    .author-photo {
+        order: -1;
+        margin-bottom: 15px;
+    }
+    
+    .author-links {
+        justify-content: center;
     }
     
     .link-btn {
