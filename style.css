@@ -83,7 +83,7 @@ section {
 section h2 {
     font-size: 1.8rem;
     margin-bottom: 25px;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     border-bottom: 3px solid var(--border-accent);
     padding-bottom: 10px;
     font-weight: 600;
@@ -115,7 +115,7 @@ section h2 {
 .author-card h3 {
     font-size: 1.4rem;
     margin-bottom: 8px;
-    color: var(--text-secondary);
+    color: var(--text-light);
     font-weight: 600;
 }
 
@@ -235,7 +235,7 @@ section h2 {
 .content-box h3 {
     font-size: 1.2rem;
     margin: 20px 0 10px 0;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     font-weight: 600;
 }
 
@@ -252,7 +252,7 @@ section h2 {
 footer {
     text-align: center;
     padding: 20px 0;
-    color: var(--text-accent);
+    color: var(--text-light);
     font-size: 0.9rem;
 }
 
