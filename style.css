@@ -1,25 +1,27 @@
 :root {
     /* Color Palette */
     --primary-dark: #003247;
-    --primary-medium: #325D6F;
-    --accent-brown: #325D6F;
+    --primary-medium: #325E6F;
+    --accent-brown: #325E6F;
     --background-light: #F4F3F0;
-    --background-medium: #ECECEC;
+    --background-medium: #DCD7C9;
     
     /* Text Colors */
-    --text-primary: #003247;
-    --text-secondary: #003247;
-    --text-accent: #003247;
+    --text-primary: #2C3639;
+    --text-secondary: #3F4E4F;
+    --text-accent: #325E6F;
     --text-light: #FFFFFF;
     
     /* Button Colors */
     --btn-linkedin: #325E6F;
     --btn-github: #003247;
-    --btn-institute: #2C3639;
+    --btn-scholar: #4285F4;
+    --btn-institute: #325E6F;
+    --btn-laboratory: #003247;
     
     /* Border Colors */
-    --border-light: #ECECEC;
-    --border-accent: #CA9161;
+    --border-light: #DCD7C9;
+    --border-accent: #325E6F;
 }
 
 * {
@@ -32,7 +34,7 @@ body {
     font-family: 'DejaVu Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-primary);
-    background: var(--background-light);
+    background: var(--primary-dark);
     min-height: 100vh;
 }
 
@@ -54,14 +56,14 @@ header {
 header h1 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--text-primary);
+    color: var(--text-light);
     margin-bottom: 10px;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .subtitle {
-    font-size: 1.8rem;
-    color: var(--text-primary);
+    font-size: 1.3rem;
+    color: var(--text-light);
     font-weight: 600;
 }
 
@@ -70,7 +72,7 @@ main {
 }
 
 section {
-    background: var(--background-light);
+    background: var(--background-medium);
     margin-bottom: 30px;
     padding: 30px;
     border-radius: 10px;
@@ -81,7 +83,7 @@ section {
 section h2 {
     font-size: 1.8rem;
     margin-bottom: 25px;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     border-bottom: 3px solid var(--border-accent);
     padding-bottom: 10px;
     font-weight: 600;
@@ -90,7 +92,7 @@ section h2 {
 .author-card {
     margin-bottom: 30px;
     padding: 20px;
-    background: var(--background-medium);
+    background: var(--primary-medium);
     border-radius: 8px;
     border-left: 4px solid var(--border-accent);
 }
@@ -112,9 +114,25 @@ section h2 {
 
 .author-card h3 {
     font-size: 1.4rem;
-    margin-bottom: 15px;
-    color: var(--text-light);
+    margin-bottom: 8px;
+    color: var(--text-secondary);
     font-weight: 600;
+}
+
+.author-email {
+    margin-bottom: 15px;
+}
+
+.author-email a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.author-email a:hover {
+    opacity: 1;
+    text-decoration: underline;
 }
 
 .author-links {
@@ -129,19 +147,25 @@ section h2 {
 }
 
 .author-photo img {
-    width: 75px;
-    height: 75px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
 }
 
 .link-btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     padding: 8px 16px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: 500;
     transition: all 0.3s ease;
     font-size: 0.9rem;
+}
+
+.link-btn i {
+    font-size: 1rem;
 }
 
 .link-btn.linkedin {
@@ -154,8 +178,18 @@ section h2 {
     color: var(--text-light);
 }
 
+.link-btn.scholar {
+    background: var(--btn-scholar);
+    color: var(--text-light);
+}
+
 .link-btn.institute {
     background: var(--btn-institute);
+    color: var(--text-light);
+}
+
+.link-btn.laboratory {
+    background: var(--btn-laboratory);
     color: var(--text-light);
 }
 
@@ -163,6 +197,35 @@ section h2 {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     opacity: 0.9;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.institute-logo {
+    margin-bottom: 25px;
+}
+
+.institute-logo img {
+    width: 100%;
+    height: auto;
+    max-height: 120px;
+    object-fit: contain;
+}
+
+.institute-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.institute-links .link-btn {
+    width: 100%;
+    max-width: 500px;
+    justify-content: center;
+    padding: 12px 20px;
 }
 
 .content-box {
@@ -223,9 +286,17 @@ footer {
     
     .author-links {
         justify-content: center;
+        flex-direction: column;
+        gap: 10px;
     }
     
     .link-btn {
         text-align: center;
+        justify-content: center;
+    }
+    
+    .institute-links .link-btn {
+        font-size: 0.85rem;
+        padding: 10px 15px;
     }
 } 
