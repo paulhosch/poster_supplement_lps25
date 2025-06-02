@@ -256,28 +256,20 @@ section h2 {
 }
 
 .sources-list li {
-    margin-bottom: 20px;
-    padding: 15px 20px;
-    background: rgba(50, 94, 111, 0.08);
-    border-radius: 8px;
-    border-left: 4px solid var(--border-accent);
+    margin-bottom: 15px;
+    padding-left: 0;
     line-height: 1.6;
     color: var(--text-primary);
     counter-increment: source-counter;
-    position: relative;
+    text-indent: -25px;
+    margin-left: 25px;
 }
 
 .sources-list li::before {
-    content: "[" counter(source-counter) "]";
-    font-weight: 700;
+    content: "[" counter(source-counter) "] ";
+    font-weight: 600;
     color: var(--text-secondary);
-    background: var(--border-accent);
-    color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    margin-right: 12px;
-    display: inline-block;
+    margin-right: 8px;
 }
 
 .sources-list li strong {
